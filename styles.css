@@ -1,0 +1,79 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+
+body {
+    font-family: 'Poppins', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background: linear-gradient(45deg, #ff6b6b, #f8c291);
+}
+
+.container {
+    text-align: center;
+    background: #fff;
+    padding: 40px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    border-radius: 12px;
+    transition: transform 0.3s ease-in-out;
+    animation: bounce 1s infinite;
+}
+
+h1 {
+    margin-bottom: 30px;
+    font-size: 2em;
+    color: #333;
+}
+
+.display {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 30px;
+}
+
+.key, .keycode {
+    font-size: 20px;
+}
+
+#keyPressed, #keyCode {
+    display: block;
+    font-size: 28px;
+    margin-top: 10px;
+    font-weight: bold;
+    color: #ff6b6b;
+    transition: color 0.3s;
+}
+
+.keyHistory {
+    margin-top: 20px;
+    text-align: left;
+}
+
+#history {
+    background: #e0e0e0;
+    padding: 20px;
+    border-radius: 8px;
+    height: 150px;
+    overflow-y: auto;
+}
+
+#history div {
+    padding: 8px;
+    border-bottom: 1px solid #ccc;
+    transition: background 0.3s;
+}
+
+#history div:hover {
+    background: #ff6b6b;
+    color: #fff;
+}
+
+@keyframes bounce {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+}
